@@ -1,0 +1,27 @@
+import turtle
+import colorsys
+import time
+
+turtle.bgcolor("Black")
+t = turtle.Turtle()
+t.speed(0)
+
+h = 0
+start_time = time.time()
+duration = 10
+
+for i in range(500):
+    if time.time() - start_time > duration:
+        break
+    
+    t.pencolor(colorsys.hsv_to_rgb(h, 1, 0.8))
+    h += 0.004
+    t.forward(i)
+    t.right(200)
+    for j in range(2):
+        t.forward(i)
+        t.right(20)
+        for k in range(2):
+            t.right(20)
+t.hideturtle()
+turtle.done()
