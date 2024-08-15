@@ -1,0 +1,9 @@
+import turtle
+f=turtle.Turtle()
+f.speed(14)
+f.color("Yellow")
+turtle.bgcolor("Black")
+for i in range(50):
+    f.circle(100)
+    f.right(50)
+turtle.done()
